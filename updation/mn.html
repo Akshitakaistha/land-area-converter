@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Scale Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://developmentlogics.com/wp-content/uploads/2020/12/dls_logo.png"
+                    alt="Development Logics">
+            </a>
+        </div>
+    </nav>
+
+    <div class="bg1">
+        <img src="2345.png" alt="background image" height="100%" width="100%">
+    </div>
+
+    <div class="converter-body">
+        <h1 class="converter-title">Land Scale Converter</h1>
+        <table style="width:100%">
+            <tr>
+                <th>
+                    <select id="areatypefrom">
+                        <option value="" selected="selected">From district</option>
+                        <option value="kangra">Kangra-1</option>
+                        <option value="kangra1">Kangra-2</option>
+                        <option value="hamirpur">Hamirpur 1</option>
+                        <option value="hamirpur1">Hamirpur 2</option>
+                        <option value="bilaspur">Bilaspur</option>
+                        <option value="shimla">Shimla</option>
+                        <option value="solan">Solan-1</option>
+                        <option value="solan1">Solan-2</option>
+                        <option value="una">Una-1</option>
+                        <option value="una1">Una-2</option>
+                        <option value="chamba">Chamba</option>
+                        <option value="kullu">Kullu</option>
+                        <option value="kinnaur">Kinnaur</option>
+                        <option value="mandi">Mandi</option>
+
+                    </select>
+                </th>
+                <th><img src="arrow.png" id="arrowimg"></th>
+                <th>
+                    <select id="areatypeto">
+                        <option value="" disabled selected>To District</option>
+                        <option value="kangra">Kangra-1</option>
+                        <option value="kangra1">Kangra-2</option>
+                        <option value="hamirpur">Hamirpur 1</option>
+                        <option value="hamirpur1">Hamirpur 2</option>
+                        <option value="bilaspur">Bilaspur</option>
+                        <option value="shimla">Shimla</option>
+                        <option value="solan">Solan-1</option>
+                        <option value="solan1">Solan-2</option>
+                        <option value="una">Una-1</option>
+                        <option value="una1">Una-2</option>
+                        <option value="chamba">Chamba</option>
+                        <option value="kullu">Kullu</option>
+                        <option value="kinnaur">Kinnaur</option>
+                        <option value="mandi">Mandi</option>
+
+                    </select>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <select id="fromtype">
+                        <option value="" selected="selected">From Type</option>
+                    </select>
+                </th>
+                <th></th>
+                <th>
+                    <select id="totype">
+                        <option value="" selected="selected">To Type</option>
+                    </select>
+                </th>
+            </tr>
+
+            <tr>
+                <th><input type="text" palceholder="input" id="input">
+                </th>
+                <th>
+                    <span>=</span>
+                </th>
+                <th>
+                    <input type="text" placeholder="result" id="result">
+                </th>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+        <div id="btn1">
+            <button id="btn1" onclick="showDialog()">Feedback</button>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <section>
+        <!-- <div class="faq">
+            <div class="carousel-item">
+                <img src="..." alt="..."> -->
+        <!-- <div class="carousel-caption d-none d-md-block">
+                    <h5></h5>
+                    <p>...</p> -->
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- dialog box -->
+    <div id="white-background">
+    </div>
+    <div id="dlgbox">
+        <div id="dlg-header">Contact Us</div>
+        <div id="dlg-body">Get in touch, let us know how can we improve?</div>
+        <input type="text" placeholder="Query" id="query">
+        <div id="dlg-footer">
+            <button onclick="dlgOK()">ASK</button>
+            <button onclick="dlgCancel()">Cancel</button>
+        </div>
+
+    </div>
+
+
+
+    <div class="FAQ-Container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="Questions-Container">
+            <div class="Content-Container">
+                <div class="FAQ-Header">
+                    <h3>What is Land-Converter?</h3>
+                    <span class="open active">+</span>
+                    <span class="close">-</span>
+                </div>
+
+                <div class="content">
+                    <p>
+                        Land area converter helps you to convert one unit of measurement to another unit of measurement. In Himachal Pradesh ,
+                        the land area is measured in different units like kanal, marla ,biswa ,bhiga etc. People find it very difficult to do the inter-conversion between these units as they accurately dont know the aacurrate measurement.
+                        </p>
+                </div>
+            </div>
+
+
+            <div class="Content-Container">
+                <div class="FAQ-Header">
+                    <h3>What is Kanal and Marla?</h3>
+                    <span class="open active">+</span>
+                    <span class="close">-</span>
+                </div>
+
+                <div class="content">
+                    <p>
+                        Kanal and Marla are most prominently used in Himachal Pradesh especially in Kangra,Hamirpur etc.
+                        Usually 1 kanal is equal to 20 marlas. But it is still diiferent in different parts of himachal pradesh.<br>
+                        <br>
+                        For further information, visit <a href="https://www.himbhoomilmk.nic.in/viewlandrecords.aspx">himbhumi.nic.in</a>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="Content-Container">
+                <div class="FAQ-Header">
+                    <h3>What is Bigha and Biswa?</h3>
+                    <span class="open active">+</span>
+                    <span class="close">-</span>
+                </div>
+
+                <div class="content">
+                    <p>Bigha and Biswa are both land conversion units .These are most commonly used in shimla and the regions of Solan, sirmaur. The biswa and bigha are measured in different ways in the different regions of Himachal Pradesh. Thus , it is diificult to calculate the accurate result. <br>
+                        <br>
+                    For further information, visit <a href="https://www.himbhoomilmk.nic.in/viewlandrecords.aspx">himbhumi.nic.in</a></p>
+                </div>
+            </div>
+
+
+
+            <div class="Content-Container">
+                <div class="FAQ-Header">
+                    <h3>Some details of Karam ?</h3>
+                    <span class="open active">+</span>
+                    <span class="close">-</span>
+                </div>
+
+                <div class="content">
+                    <p>The usage of Square Karam for the measurement of land is prevalent in the States of Himachal Pradesh, Haryana, and Punjab. However, it is a traditional unit for measuring smaller lands, including farmlands, residential lands, and commercial lands in rural areas, usually below one acre. One Karam is equivalent to 5.5 feet.</p>
+                </div>
+            </div>
+
+
+
+            <div class="Content-Container">
+                <div class="FAQ-Header">
+                    <h3>Most prominent units used in Himachal Pradesh</h3>
+                    <span class="open active">+</span>
+                    <span class="close">-</span>
+                </div>
+
+                <div class="content">
+                    <p>The above information of the most prominent units in Himachal Pradesh is given by the following :
+                        <a href="https://himachal.nic.in">Appendex-1</a></p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+<hr><hr>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Development Logics</h3>
+            <p>We are an IT and Management Consulting company
+                with expertise in offering
+                Digital Transformation services
+                for businesses globally.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021 <a href="https://developmentlogics.com">Development Logics Pvt.Ltd</a>.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
